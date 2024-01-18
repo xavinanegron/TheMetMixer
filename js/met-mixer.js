@@ -21,13 +21,13 @@ async function fetchRandomArtwork() {
 }
 
 
-// FUNCTION
+// FUNCTION to get random objectID from API
 function getRandomObjectID(objectIDs) {
   return objectIDs[Math.floor(Math.random() * objectIDs.length)];
 }
 
 
-// FUNCTION
+// FUNCTION to display artwork
 function displayArtwork(artwork) {
   const artContainer = document.getElementById('artContainer');
   artContainer.innerHTML = '';
