@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- CSS Link -->
+ <link rel="stylesheet" href="style.css">
+
+ <!-- Bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Cormorant Garamond Google Font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+ 
+ <!-- Raleway Google Font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,300;0,400;1,400&display=swap" rel="stylesheet">
+ 
+ <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+    }
+
+/* Hero Section/ Landing Page */
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .hero h1 {
+        display: block;
+        font-size: 80px;
+        color: rgb(253, 250, 241);
+        font-family: 'Cormorant Garamond', serif;
+        text-transform: uppercase;
+        letter-spacing: -1.2px;
+        line-height: 80px;
+        transition: 0.5s;
+        overflow: hidden;
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        text-align: left;
+        line-height: 30px;
+    }
+    .hero a  {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(253, 250, 241);
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        border: 2px solid rgb(253, 250, 241);
+        padding: 10px 20px;
+        margin-top: 20px;
+        min-width: 150px;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        
+    }
+
+    .hero a:hover { 
+    color: black;
+    transition-duration: 0.5s;
+    background-color: white;
+
+}
+
+    .hero {
+        position: relative;
+        height: 800px;
+        background: url('media/museumgirl.jpg') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+    }
+
+    .hero-text {
+        width: 1000px;
+        text-align: left;
+        padding-left: 10%;
+
+    }
+
+
+    /* About */
+        .main-title {
+        font-size: 22px;
+        letter-spacing: -1.2px;
+        color: rgb(66, 62, 49);
+        font-family: 'Cormorant Garamond', serif;
+        padding: 100px 200px;
+        background-color: rgb(248, 246, 240);
+        text-align: center;
+        }
+    
+  
+        /* Art Image Section */
+
+        .random-art {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 50px 200px;
+          height: 650px;
+          background-color: white;
+      
+        }
+
+        #artContainer {
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          
+        }
+
+        .art-image {
+          text-align: center;
+          height: auto;
+          max-width: 100%;
+          position: relative;
+          background-color: white;
+        }
+        
+        #artContainer img {
+          max-height: 400px;
+          width: auto;
+          display: block;
+          margin: 0 auto;
+        }
+
+        /* Info Section */
+  
+        #infoContainer {
+          padding-left: 80px;
+          padding-right: 80px;
+      
+        }
+
+        .art-info {
+          font-size: 18px;
+          text-align: start;
+          padding: 0 20px;
+        }
+
+
+        /* Get Art Button */
+
+        .curate-button {
+          background-color: white;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+
+        .curate-button button {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: rgb(66, 62, 49);
+            color: rgb(253, 250, 241);
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            border: 2px solid rgb(66, 62, 49);
+            padding: 10px 40px;
+            min-width: 150px;
+            justify-content: center;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .curate-button button:hover { 
+            color: rgb(66, 62, 49);
+            background-color: rgb(253, 250, 241);
+            transition-duration: 0.5s;
+            pointer-events: visible;
+        }
+
+        /* Footer */
+        .footer-quote {
+          font-size: 30px;
+          letter-spacing: -1.2px;
+          color: rgb(66, 62, 49);
+          font-family: 'Cormorant Garamond', serif;
+          padding: 80px 200px;
+          background-color: #E7F0FD;
+          text-align: center;
+          }
+
+          @media (max-width: 768px) {
+            body {
+              font-size: 14px;
+            }
+
+            .hero h1 {
+              font-size: 40px;
+              line-height: 50px;
+            }
+            a, button {
+              font-size: 16px;
+              padding: 8px 16px;
+            }
+
+            .random-art {
+              padding: 30px 20px;
+              height: auto;
+            }
+
+            .art-image img {
+              max-height: 300px;
+            }
+
+            .footer-quote {
+              font-size: 24px;
+            }
+          }
+
+
+  </style>
+  <title>The Met Mixer</title>
+</head>
+<body>
+    <!-- Hero Image credit to Christian Bowen on Unplash -->
+    <div class="hero">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1> Welcome <br> to The Met Mixer</h1>
+               <p>With a simple click, The Met Mixer generates random artwork, <br> offering a unique and delightful way to explore the vast realm of art.</p>
+            <a href="#random-art">Explore Art</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+
+    <!-- About -->
+    <div class="main-content">
+      <div class="row">
+        <div class="main-title col-lg-12">
+          <h2>The Met Mixer is an online platform that generates random artwork, offering a unique and delightful way to explore the vast realm of art. Inmerse yourself in the beauty of diverse masterpieces, spanning different areas, styles and cultures.</h2>
+      </div>
+      </div>
+      </div>
+    
+
+       <!-- Get Art Button -->
+       <div>
+        <div class="curate-button col-lg-12" id="random-art">
+          <button id="generateArtButton">Get Art</button>
+        </div>
+      </div>
+
+         <!-- Art Image Section -->
+         <div class="row random-art" id="random-art">
+          <div class="art-image col-lg-6">
+            <div id="artContainer"></div>
+          </div>
+
+          <!--  Info Section --> 
+          <div class="art-info col-lg-6">
+            <div class="infoContainer" id="infoContainer">
+            </div>
+          </div>
+          </div> 
+
+      <!-- Footer -->
+      <div class="footer-content">
+        <div class="row">
+          <div class="footer-quote col-lg-12">
+            <p>"Art washes away from the soul the dust of everyday life. <br> Let your creation be the cleansing wave that refreshes hearts and minds."</p>
+            <p>-Pablo Picasso</p>
+        </div>
+        </div>
+        </div>
+
+
+<!-- Bootstrap JavaScript link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- JavaScript Link -->
+<script src="js/met-mixer.js"></script>
+</body>
+</html>
+    
+      
