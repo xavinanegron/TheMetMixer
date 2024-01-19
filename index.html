@@ -206,20 +206,39 @@ html {
           }
 
           /* Media queries for responsive design on mobile */
-          @media only screen and (max-width: 768px) {
-            .hero h1 {
+          @media only screen and (max-width: 820px) {
+            
+  .hero h1 {
     font-size: 32px;
     line-height: 40px;
+    width: 400px;
+   
   }
 
-  .hero p,
+  .hero-text {
+    text-align: start;
+    width: 400px;
+  }
+
   .hero a {
     font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    
   }
 
+  .hero p {
+   
+  }
+
+  .hero img { 
+  width: fit-content;
+  height: fit-content;
+  
+}
   .main-title {
     font-size: 16px;
-    padding: 30px;
+    padding: 50px;
   }
 
   .footer-quote {
@@ -228,9 +247,12 @@ html {
   }
 
   #artContainer img {
-    max-height: 200px;
+    min-height: 400px;
   }
-
+ 
+.random-art {
+  height: auto;
+}
   .art-info {
     font-size: 14px;
   }
@@ -239,9 +261,10 @@ html {
     font-size: 14px;
     padding: 8px 16px;
   }
+
 }
             
-          }
+   
 
           
 
@@ -250,12 +273,13 @@ html {
   <title>The Met Mixer</title>
 </head>
 <body>
+
     <!-- Hero Image credit to Christian Bowen on Unplash -->
     <div class="hero">
         <div class="hero-image">
             <div class="hero-text">
                 <h1> Welcome <br> to The Met Mixer</h1>
-               <p>With a simple click, The Met Mixer generates random artwork, <br> offering a unique and delightful way to explore the vast realm of art.</p>
+                <p>With a simple click, The Met Mixer generates random artwork, <br> offering a unique and delightful way to explore the vast realm of art.</p>
             <a href="#random-art">Explore Art</a>
             </div>
         </div>

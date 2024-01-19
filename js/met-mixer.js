@@ -103,7 +103,7 @@ function displayArtwork(artwork) {
    }  else {
 //  If no culture, display a default message.
     const noCultureMessage = document.createElement('p');
-    noTitleMessage.textContent = 'This artwork does not have culture information.';
+    noCultureMessage.textContent = 'This artwork does not have culture information.';
     infoContainer.appendChild(noCultureMessage);
     return;
       }
