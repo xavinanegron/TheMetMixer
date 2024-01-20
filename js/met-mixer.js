@@ -66,7 +66,7 @@ function displayArtwork(artwork) {
 
     if (artwork.title) {
    const title = document.createElement('p');
-   title.textContent = `Title: ${artwork.title}`;
+   title.textContent = `<strong>Title:</strong> ${artwork.title}`;
    infoContainer.appendChild(title);
    }  else {
 //  If no title, display a default message.
@@ -79,7 +79,7 @@ function displayArtwork(artwork) {
 
     if (artwork.artistDisplayName) {
    const artist = document.createElement('p');
-  artist.textContent = `Artist: ${artwork.artistDisplayName}`;
+  artist.textContent = `<strong>Artist</strong>: ${artwork.artistDisplayName}`;
    infoContainer.appendChild(artist);
    } else {
 //  If no artist name, display a default message.
@@ -92,7 +92,7 @@ function displayArtwork(artwork) {
 
    if (artwork.medium) {
    const medium = document.createElement('p');
-   medium.textContent = `Medium: ${artwork.medium}`;
+   medium.textContent = `<strong>Medium</strong>: ${artwork.medium}`;
    infoContainer.appendChild(medium);
    }  else {
 //  If no medium, display a default message.
@@ -104,7 +104,7 @@ function displayArtwork(artwork) {
 
    if (artwork.culture) {
    const culture = document.createElement('p');
-   culture.textContent = `Culture: ${artwork.culture}`;
+   culture.textContent = `<strong>Culture</strong>: ${artwork.culture}`;
    infoContainer.appendChild(culture);
    }  else {
 //  If no culture, display a default message.
@@ -116,7 +116,7 @@ function displayArtwork(artwork) {
 
    if (artwork.period) {
    const period = document.createElement('p');
-   period.textContent = `Time Period: ${artwork.period}`;
+   period.textContent = `<strong>Time Period</strong>: ${artwork.period}`;
    infoContainer.appendChild(period);
    }  else {
 //  If no period, display a default message.
@@ -128,7 +128,7 @@ function displayArtwork(artwork) {
 
 //   if (artwork.objectEndDate) {
 //   const date = document.createElement('p');
-//   date.textContent = `Date: ${artwork.objectEndDate}`;
+//   date.textContent = `<strong>Date</strong>: ${artwork.objectEndDate}`;
 //   infoContainer.appendChild(date);
 //   }  else {
 //  If no period, display a default message.
