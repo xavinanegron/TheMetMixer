@@ -2,34 +2,45 @@
 const metLink = 'https://collectionapi.metmuseum.org/public/collection/v1/objects';
    
 // FUNCTION
+//async function fetchRandomArtwork() {
+//  try {
+//    const response = await fetch(metLink);
+//    const data = await response.json(); 
+//    const randomObjectID = getRandomObjectID(data.objectIDs); 
+
+//    const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
+//    const artworkData = await artworkResponse.json();
+
+
+
+//    return artworkData;
+//  } catch (error) {
+//    console.error('Error fetching artwork:', error);
+//    return null;
+//  }
+//}
+// FUNCTION
 async function fetchRandomArtwork() {
   try {
     const response = await fetch(metLink);
-    const data = await response.json(); 
-    //const randomObjectID = getRandomObjectID(data.objectIDs); 
-    // Fetch all artwork data
-    const artworkDataArray = await Promise.all(
-      data.objectIDs.map(async (objectID) => {
-        const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
-        return await artworkResponse.json();
-      })
-    );
+    const data = await response.json();
 
-    // Filter out objects without a valid image
-    const objectsWithImages = artworkDataArray.filter(artworkData => artworkData.primaryImage !== undefined);
+    const objectIDs = data.objectIDs.filter(objectID => objectID);
 
-    if (objectsWithImages.length === 0) {
-      // No valid artwork found
+    if (objectIDs.length === 0) {
+      // No valid object IDs found
       return null;
     }
 
-    // Select a random object with a valid image
-    const randomObject = objectsWithImages[Math.floor(Math.random() * objectsWithImages.length)];
+    const randomObjectID = objectIDs[Math.floor(Math.random() * objectIDs.length)];
 
-    //const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
-    //const artworkData = await artworkResponse.json();
+    const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
+    const artworkData = await artworkResponse.json();
 
-
+    if (artworkData.primaryImage === undefined) {
+      // If the selected artwork has no valid image, recursively try again
+      return await fetchRandomArtwork();
+    }
 
     return artworkData;
   } catch (error) {
@@ -37,7 +48,6 @@ async function fetchRandomArtwork() {
     return null;
   }
 }
-
 
 // FUNCTION to get random objectID from API
 function getRandomObjectID(objectIDs) {
@@ -56,12 +66,12 @@ function displayArtwork(artwork) {
 
 
 //   If artwork not available it will display a error message.
-//  if (!artwork) {
-//    const errorMessage = document.createElement('p');
-//    errorMessage.textContent = 'Failed to fetch artwork.';
-//    artContainer.appendChild(errorMessage);
-//    return;
-//  }
+  if (!artwork) {
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'Failed to fetch artwork.';
+    artContainer.appendChild(errorMessage);
+    return;
+  }
 
 
 // Adding if statements to only create element if found on API endpoint.
