@@ -50,6 +50,14 @@ async function fetchRandomArtwork() {
       attempts++;
     }
 
+         // No valid artwork found after 5 attempts
+    return null;
+  } catch (error) {
+    console.error('Error fetching artwork:', error);
+    return null;
+  }
+}
+
 
 // FUNCTION to display artwork
 function displayArtwork(artwork) {
