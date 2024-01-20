@@ -65,67 +65,81 @@ function displayArtwork(artwork) {
     artContainer.appendChild(noImageMessage);
     }
 
-    if (artwork.title) {
-   const title = document.createElement('p');
-   title.textContent = `<strong>Title:</strong> ${artwork.title}`;
-   infoContainer.appendChild(title);
-   }  else {
+
+// Artwork Info
+function createInfoElement(label, value) {
+    const element = document.createElement('p');
+    element.innerHTML = `<strong>${label}:</strong> ${value || 'This artwork does not have ' + label.toLowerCase() + ' information.'}`;
+    return element;
+  }
+
+  infoContainer.appendChild(createInfoElement('Title', artwork.title));
+  infoContainer.appendChild(createInfoElement('Artist', artwork.artistDisplayName));
+  infoContainer.appendChild(createInfoElement('Medium', artwork.medium));
+  infoContainer.appendChild(createInfoElement('Culture', artwork.culture));
+  infoContainer.appendChild(createInfoElement('Time Period', artwork.period));
+}
+//    if (artwork.title) {
+//   const title = document.createElement('p');
+//   title.textContent = `<strong>Title:</strong> ${artwork.title}`;
+//   infoContainer.appendChild(title);
+//   }  else {
 //  If no title, display a default message.
-    const noTitleMessage = document.createElement('p');
-    noTitleMessage.textContent = 'This artwork does not have a title.';
-    infoContainer.appendChild(noTitleMessage);
-    return;
-      }
+//    const noTitleMessage = document.createElement('p');
+//    noTitleMessage.textContent = 'This artwork does not have a title.';
+//    infoContainer.appendChild(noTitleMessage);
+//    return;
+//      }
 
 
-    if (artwork.artistDisplayName) {
-   const artist = document.createElement('p');
-  artist.textContent = `<strong>Artist</strong>: ${artwork.artistDisplayName}`;
-   infoContainer.appendChild(artist);
-   } else {
+//    if (artwork.artistDisplayName) {
+//   const artist = document.createElement('p');
+//  artist.textContent = `<strong>Artist</strong>: ${artwork.artistDisplayName}`;
+//   infoContainer.appendChild(artist);
+//   } else {
 //  If no artist name, display a default message.
-    const noArtistMessage = document.createElement('p');
-    noArtistMessage.textContent = 'This artwork does not have an artist name.';
-    infoContainer.appendChild(noArtistMessage);
-    return;
-      }
+//    const noArtistMessage = document.createElement('p');
+//    noArtistMessage.textContent = 'This artwork does not have an artist name.';
+//    infoContainer.appendChild(noArtistMessage);
+//    return;
+//      }
 
 
-   if (artwork.medium) {
-   const medium = document.createElement('p');
-   medium.textContent = `<strong>Medium</strong>: ${artwork.medium}`;
-   infoContainer.appendChild(medium);
-   }  else {
+//   if (artwork.medium) {
+//   const medium = document.createElement('p');
+//   medium.textContent = `<strong>Medium</strong>: ${artwork.medium}`;
+//   infoContainer.appendChild(medium);
+//   }  else {
 //  If no medium, display a default message.
-    const noMediumMessage = document.createElement('p');
-    noMediumMessage.textContent = 'This artwork does not have medium information.';
-    infoContainer.appendChild(noMediumMessage);
-    return;
-      }
+//    const noMediumMessage = document.createElement('p');
+//    noMediumMessage.textContent = 'This artwork does not have medium information.';
+//    infoContainer.appendChild(noMediumMessage);
+//    return;
+//      }
 
-   if (artwork.culture) {
-   const culture = document.createElement('p');
-   culture.textContent = `<strong>Culture</strong>: ${artwork.culture}`;
-   infoContainer.appendChild(culture);
-   }  else {
+//   if (artwork.culture) {
+//   const culture = document.createElement('p');
+//   culture.textContent = `<strong>Culture</strong>: ${artwork.culture}`;
+//   infoContainer.appendChild(culture);
+//   }  else {
 //  If no culture, display a default message.
-    const noCultureMessage = document.createElement('p');
-    noCultureMessage.textContent = 'This artwork does not have culture information.';
-    infoContainer.appendChild(noCultureMessage);
-    return;
-      }
+//    const noCultureMessage = document.createElement('p');
+//    noCultureMessage.textContent = 'This artwork does not have culture information.';
+//    infoContainer.appendChild(noCultureMessage);
+//    return;
+//      }
 
-   if (artwork.period) {
-   const period = document.createElement('p');
-   period.textContent = `<strong>Time Period</strong>: ${artwork.period}`;
-   infoContainer.appendChild(period);
-   }  else {
+//   if (artwork.period) {
+//   const period = document.createElement('p');
+//   period.textContent = `<strong>Time Period</strong>: ${artwork.period}`;
+//   infoContainer.appendChild(period);
+//   }  else {
 //  If no period, display a default message.
-    const noPeriodMessage = document.createElement('p');
-    noPeriodMessage.textContent = 'This artwork does not have time period information..';
-    infoContainer.appendChild(noPeriodMessage);
-    return;
-      }
+//    const noPeriodMessage = document.createElement('p');
+//    noPeriodMessage.textContent = 'This artwork does not have time period information..';
+//    infoContainer.appendChild(noPeriodMessage);
+//    return;
+//      }
 
 //   if (artwork.objectEndDate) {
 //   const date = document.createElement('p');
