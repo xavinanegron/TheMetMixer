@@ -56,12 +56,12 @@ function displayArtwork(artwork) {
 
 
 //   If artwork not available it will display a error message.
-  if (!artwork) {
-    const errorMessage = document.createElement('p');
-    errorMessage.textContent = 'Failed to fetch artwork.';
-    artContainer.appendChild(errorMessage);
-    return;
-  }
+//  if (!artwork) {
+//    const errorMessage = document.createElement('p');
+//    errorMessage.textContent = 'Failed to fetch artwork.';
+//    artContainer.appendChild(errorMessage);
+//    return;
+//  }
 
 
 // Adding if statements to only create element if found on API endpoint.
