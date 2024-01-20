@@ -2,56 +2,18 @@
 const metLink = 'https://collectionapi.metmuseum.org/public/collection/v1/objects';
    
 // FUNCTION
-//async function fetchRandomArtwork() {
-//  try {
-//    const response = await fetch(metLink);
-//    const data = await response.json(); 
-//    const randomObjectID = getRandomObjectID(data.objectIDs); 
-
-//    const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
-//    const artworkData = await artworkResponse.json();
-
-
-
-//    return artworkData;
-//  } catch (error) {
-//    console.error('Error fetching artwork:', error);
-//    return null;
-//  }
-//}
-// FUNCTION
 async function fetchRandomArtwork() {
   try {
     const response = await fetch(metLink);
-    const data = await response.json();
+    const data = await response.json(); 
+   const randomObjectID = getRandomObjectID(data.objectIDs); 
 
-    const objectIDs = data.objectIDs;
+   const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
+    const artworkData = await artworkResponse.json();
 
-    if (objectIDs.length === 0) {
-      // No valid object IDs found
-      return null;
-    }
 
-    let randomObjectID;
-    let attempts = 0;
-    
-    // Try to find an object with a valid image (up to 5 attempts)
-    while (attempts < 5) {
-      randomObjectID = objectIDs[Math.floor(Math.random() * objectIDs.length)];
 
-      const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
-      const artworkData = await artworkResponse.json();
-
-      if (artworkData.primaryImage !== undefined) {
-        // Found an object with a valid image
-        return artworkData;
-      }
-
-      attempts++;
-    }
-
-         // No valid artwork found after 5 attempts
-    return null;
+    return artworkData;
   } catch (error) {
     console.error('Error fetching artwork:', error);
     return null;
