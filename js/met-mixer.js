@@ -10,7 +10,7 @@ async function fetchRandomArtwork() {
 //     const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
 //    const artworkData = await artworkResponse.json();
 //      return artworkData.primaryImage !== undefined; // Filter out objects without a valid image
-    });
+//    });
 
     const randomObjectID = getRandomObjectID(objectIDs);
    
