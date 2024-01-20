@@ -78,6 +78,7 @@ function createInfoElement(label, value) {
   infoContainer.appendChild(createInfoElement('Medium', artwork.medium));
   infoContainer.appendChild(createInfoElement('Culture', artwork.culture));
   infoContainer.appendChild(createInfoElement('Time Period', artwork.period));
+  infoContainer.appendChild(createInfoElement('Date', artwork.objectEndDate));
 }
 //    if (artwork.title) {
 //   const title = document.createElement('p');
