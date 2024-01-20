@@ -6,17 +6,7 @@ async function fetchRandomArtwork() {
   try {
     const response = await fetch(metLink);
     const data = await response.json(); 
-    //const randomObjectID = getRandomObjectID(data.objectIDs); 
-    const objectIDs = await Promise.all(
-      data.objectIDs.map(async (objectID) => {
-        const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
-        const artworkData = await artworkResponse.json();
-        return artworkData.primaryImage !== undefined ? objectID : null; // Filter out objects without a valid image
-      })
-    );
-
-    const filteredObjectIDs = objectIDs.filter(id => id !== null);
-    const randomObjectID = getRandomObjectID(filteredObjectIDs);
+    const randomObjectID = getRandomObjectID(data.objectIDs); 
    
     const artworkResponse = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomObjectID}`);
     const artworkData = await artworkResponse.json();
