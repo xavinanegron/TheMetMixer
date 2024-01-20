@@ -153,7 +153,7 @@ function createInfoElement(label, value) {
 //    return;
 //     }
 
-}
+//}
 
 document.getElementById('generateArtButton').addEventListener('click', async () => {
 try {
