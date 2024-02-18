@@ -1,8 +1,8 @@
-## The Met Mixer
+# The Met Mixer- A Vanilla JavaScript App
 
 App that generates random artwork from the Metropolitan Museum of Art Collection in New York City along with a description. This project demonstrates how to use HTML, CSS, Bootstrap and vanilla JavaScript to connect to a public API and update the webpage's content dynamically.
 
-### Key JavaScript Concepts Covered
+## Key JavaScript Concepts Covered
 
 **Asynchronous Data Fetching:** Utilizes async/await for asynchronous API calls to the Metropolitan Museum of Art Collection API. <br>
 
