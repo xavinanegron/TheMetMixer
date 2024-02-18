@@ -10,7 +10,7 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 
 **DOM Manipulation:** Demonstrates proficiency in manipulating the Document Object Model (DOM) to dynamically render artwork details, creating an engaging user experience. <br>
 
-**Error Handling and User Feedback:** Implements error handling mechanisms to manage potential API request failures or user input errors, providing clear feedback to users and ensuring the application's reliability. <br>
+**Error Handling and User Feedback:** Implements error handling to manage potential API request failures or user input errors, providing clear feedback to users and ensuring the application's reliability. <br>
 <br>
 ## Contributors
 This documentation was created with the help of the following contributors:  @AMorganH
