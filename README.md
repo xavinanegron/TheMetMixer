@@ -14,6 +14,6 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 <br>
 
 
+https://github.com/xavinanegron/TheMetMixer/assets/146385936/e7fe5d92-dc4f-49c9-a7e7-6d4142bd43a8
 
 
-<img width="1424" alt="Screenshot 2024-01-18 at 8 01 59 PM" src="https://github.com/xavinanegron/TheMetMixer/assets/146385936/67fddcc1-131a-4e97-a680-8e5c71c29e52">
