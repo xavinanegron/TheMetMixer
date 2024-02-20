@@ -6,7 +6,7 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 
 **Asynchronous Data Fetching:** Utilizes async/await for asynchronous API calls to the Metropolitan Museum of Art Collection API. <br>
 
-**Advanced Event Handling:** Employs event handling strategies to manage user interactions, such as viewing artwork details, enhancing the application's interactivity and usability. <br>
+**Advanced Event Handling:** Event handling strategies to manage user interactions, such as viewing artwork details, enhancing the application's interactivity and usability. <br>
 
 **DOM Manipulation:** Demonstrates proficiency in manipulating the Document Object Model (DOM) to dynamically render artwork details, creating an engaging user experience. <br>
 
