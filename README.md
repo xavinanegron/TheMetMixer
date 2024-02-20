@@ -13,7 +13,7 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 **Error Handling and User Feedback:** Implements error handling to manage potential API request failures or user input errors, providing clear feedback to users and ensuring the application's reliability. <br>
 <br>
 ## Contributors
-This documentation was created with the help of the following contributors:  [@AMorganH](https://github.com/AMorganH)
+This application was created with the help of the following contributors:  [@AMorganH](https://github.com/AMorganH)
 ## Live Demo
 Check out the live demo here: [The Met Mixer](https://the-met-mixer.vercel.app/)
 
