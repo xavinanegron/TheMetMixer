@@ -6,12 +6,11 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 
 **Asynchronous Data Fetching:** Utilizes async/await for asynchronous API calls to the Metropolitan Museum of Art Collection API. <br>
 
-**Advanced Event Handling:** Event handling strategies to manage user interactions, such as viewing artwork details, enhancing the application's interactivity and usability. <br>
+**Event Handling:** Event handling strategies to manage user interactions, such as viewing artwork details, enhancing the application's interactivity and usability. <br>
 
-**DOM Manipulation:** Demonstrates proficiency in manipulating the Document Object Model (DOM) to dynamically render artwork details, creating an engaging user experience. <br>
-
-**Error Handling and User Feedback:** Implements error handling to manage potential API request failures or user input errors, providing clear feedback to users and ensuring the application's reliability. <br>
+**Error Handling and User Feedback:** Implements error handling to manage potential API request failures, providing clear feedback to users and ensuring the application's reliability. <br>
 <br>
+
 ## Contributors
 This application was created with the help of the following contributors:  [@AMorganH](https://github.com/AMorganH)
 ## Live Demo
