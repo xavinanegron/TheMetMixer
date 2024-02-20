@@ -12,7 +12,7 @@ App that generates random artwork from the Metropolitan Museum of Art Collection
 <br>
 
 ## Contributors
-This application was created with the help of the following contributors:  [@AMorganH](https://github.com/AMorganH)
+This application was built with the help of the following contributors:  [@AMorganH](https://github.com/AMorganH)
 ## Live Demo
 Check out the live demo here: [The Met Mixer](https://the-met-mixer.vercel.app/)
 
